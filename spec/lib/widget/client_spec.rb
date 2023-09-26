@@ -108,7 +108,7 @@ describe Echosign::Client do
     it 'returns widget document file' do
       VCR.use_cassette('get_widget_document_file', record: :once) do
         widget_response = client.get_widget_document_file(widget_id, document_id)
-        expect(widget_response).to_not be_nil
+        expect(widget_response.body).to_not be_nil
       end
     end
   end
@@ -120,7 +120,7 @@ describe Echosign::Client do
   #      VCR.use_cassette('get_widget_audit_trail', :record => :once) do
   #        widget_response = client.get_widget_audit_trail(widget_id)
   #        binding.pry
-  #        expect(widget_response).to_not be_nil
+  #        expect(widget_response.body).to_not be_nil
   #      end
   #    end
   #  end
@@ -132,7 +132,7 @@ describe Echosign::Client do
   #      VCR.use_cassette('get_widget_combined_pdf', :record => :once) do
   #        widget_response = client.get_widget_combined_pdf(widget_id)
   #        binding.pry
-  #        expect(widget_response).to_not be_nil
+  #        expect(widget_response.body).to_not be_nil
   #      end
   #    end
   #  end
@@ -144,7 +144,7 @@ describe Echosign::Client do
   #      VCR.use_cassette('get_widget_form_data', :record => :once) do
   #        widget_response = client.get_widget_form_data(widget_id)
   #        binding.pry
-  #        expect(widget_response).to_not be_nil
+  #        expect(widget_response.body).to_not be_nil
   #      end
   #    end
   #  end
