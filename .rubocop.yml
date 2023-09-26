@@ -4,7 +4,7 @@ AllCops:
   DisplayStyleGuide: true
   ExtraDetails: true
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Style/StringLiterals:
